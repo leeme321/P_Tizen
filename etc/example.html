@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<title>Example</title>
+	<meta http-equiv="Cache-control" content="no-cache" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<script type="text/javascript" src="Script/jquery.iphonepicker.min.js"></script>
+</head>
+<body>
+	<p>
+		Original control is set visible again for testing purposes, because iPhonePickerView control hides it automatically. It is set as a replacement and therefore selecting a different value in the original control does NOT effect the iPhonePickerView control.
+	</p>
+	<p style="position:relative;float:left;width:100%;">
+		<select id="countries" name="countries">
+			<option value="6">Austria</option>
+			<option value="2">Belgium</option>
+			<option value="5">France</option>
+			<option value="3">Germany</option>
+			<option value="8">Great Britain</option>
+			<option value="4">Luxembourg</option>
+			<option selected="selected" value="1">Netherlands</option>
+			<option value="10">Spain</option>
+			<option value="9">Sweden</option>
+			<option value="7">Switserland</option>
+		</select>
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('#countries').iPhonePicker({ width: '80px', imgRoot: 'images/' });
+				$('#countries').show(); // made invisible by iPhonePicker command
+			});
+		</script>	
+	</p>
+	<p style="position:relative;float:left;width:100%;">
+		<input type="button" value="Show the selected country" onclick="alert('Selected country: ' + $('#countries option:selected').text());" /><br/>
+		<input type="button" value="Show the selected value" onclick="alert('Selected value: ' + $('#countries').val());" /><br/>
+		<input type="button" value="Show the selected index" onclick="alert('Selected index: ' + $('#countries')[0].selectedIndex);" /><br/>
+	</p>
+</body>
+</html>

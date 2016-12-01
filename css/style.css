@@ -1,0 +1,226 @@
+@font-face {
+	font-family: 'Viga';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Viga-Regular'), url('fonts/viga.woff') format('woff');
+}
+
+body{
+	display:block;
+	/*width:350px;
+	height:350px;*/
+	background-image:url('img/bg.png');
+	position:static;
+	margin-bottom:20px;
+	margin-top:20px;
+	margin-left:20px;
+	margin-right:20px;
+	/* position:relative; */
+}
+	
+	
+/* 부모요소 */
+#JSMetroContainer{
+	/*
+	position:relative;
+	width: auto;
+	height: auto;
+	background-image:url('img/Metronome_main.png');
+	background-size:100% 100%;
+
+	cursor:default;
+	font-family: verdana,  Tahoma, Geneva, sans-serif;
+	*/
+}
+
+#BellMute{display:none;}
+#BellMute_l{
+	background-image:url('img/sound_on.png');
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+	background-position:center center;
+	position:absolute;
+	border-radius:30%;
+	/* top:20%;
+	left:25%; */
+	top:10%;
+	left:50%;
+	width:50px;
+	height:50px;
+	margin:-25px 0 0 -25px;
+	cursor:pointer;
+}
+#BellMute:checked + label{background-image: url('img/sound_off.png');}
+
+
+#Bell_drum{
+	background-image:url('img/drum.png');
+	background-size:100% 100%;
+	width:50px;
+	height:50px;
+	margin:-25px 0 0 -25px;
+	position:absolute;
+	top:20%;
+	left:25%;
+	/* top:10%;
+	left:50%; */
+	cursor:pointer;	
+}
+
+#Bell_elec{
+	background-image:url('img/electronic-sound.png');
+	background-size:100% 100%;
+	width:50px;
+	height:50px;
+	margin:-25px 0 0 -25px;
+	position:absolute;
+	top:20%;
+	left:75%;
+	cursor:pointer;	
+}
+/*#tapBkg{
+	background-image:url('img/tap_bkg.png');
+	width:115px;
+	height:131px;
+	position:absolute;
+	top:-29px;
+	left:168px;
+	visibility:hidden;
+}*/
+#tempoUp{
+	background-image:url('img/up.png');
+	background-size:100% 100%;
+	border-radius:30%;
+	position:absolute;
+	top:80%;
+	left:83%;
+	width:40px;
+	height:40px;
+	margin:-20px 0 0 -20px;
+	cursor:pointer;
+}
+#tempoDown{
+	background-image:url('img/down.png');
+	background-size:100% 100%;
+	border-radius:30%;
+	position:absolute;
+	top:80%;
+	left:17%;
+	width:40px;
+	height:40px;
+	margin:-20px 0 0 -20px;
+	cursor:pointer;
+}
+
+#Beat{
+	/*
+	background-image:url('img/box.png');
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+	background-position:center center;
+	border-radius:30%;
+	*/
+	position:absolute;
+	top:40%;
+	left:50%;
+	margin:-100px 0 0 -100px;
+	vertical-align:top;
+	height:200px;
+	width:200px;
+	text-align:center;
+	line-height:180px;
+	font-size:185px;/* font-size:230px; */
+	font-family: Viga, Tahoma, Geneva, sans-serif;
+}
+
+#timeSignature{
+	background-image:url('img/box.png');
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+	background-position:center center;
+	border-radius:20%;
+	position:absolute;
+	top:63%;
+	left:55%;
+	width:120px;
+	height:45px;
+	margin:-25px 0 0 -75px;
+	text-align:center;
+	line-height:50px;
+	font-size:30px;
+	font-family: Viga, Tahoma, Geneva, sans-serif;
+}
+
+#timeSignature:hover{
+	color:#c32e2e;
+	font-weight:bold;
+}
+
+#tap{
+	background-image:url('img/tap.png');
+	background-size:80% 80%;
+	background-repeat:no-repeat;
+	background-position:center center;
+	position:absolute;
+	border-radius:100%;
+	top:45%;
+	left:18%;
+	width:90px;
+	height:90px;
+	margin:-50px 0 0 -50px;
+	cursor:pointer;
+}
+
+#tap:hover{
+	color:white;
+}
+
+#power{display:none;}
+#power_l{
+	position:absolute;
+	background-image:url('img/play.png');
+	background-size:80% 80%;
+	background-repeat:no-repeat;
+	background-position:center center;
+	border-radius:100%;
+	top:45%;
+	left:85%;
+	width:90px;
+	height:90px;
+	margin:-50px 0 0 -50px;
+	cursor:pointer;
+}
+#power:checked + label{background-image: url('img/stop.png');}
+
+#TempoContainer{
+	background-image:url('img/box.png');
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+	background-position:center center;
+	position:absolute;
+	border-radius:20%;
+	/*color:black;*/
+	top:80%;
+	left:50%;
+	width:180px;
+	height:70px;
+	margin:-35px 0 0 -90px;
+	text-align:center;
+	line-height:70px;
+	font-family: Viga, Tahoma, Geneva, sans-serif;
+	cursor:pointer;
+}
+
+#tempoDisplay{
+	font-size:60px;
+}
+#tempoTag{
+	font-size:30px;
+}
+.unselectable {
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
